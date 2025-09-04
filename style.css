@@ -1,0 +1,331 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  color: #333;
+  background: #d3d1d1;
+}
+h1, h2, h3 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+p {
+  margin-bottom: 15px;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('images/cazino\ lung.JPG') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  display: flex;             /* centra contenido */
+  align-items: center;       /* vertical */
+  justify-content: center;   /* horizontal */
+  min-height: 441.75px;         /* ocupa toda la altura de la pantalla */
+  padding: 0 20px;           /* solo márgenes laterales */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.contact .btn {
+  background: #28a745;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+}
+.contact .btn:hover {
+  background: #218838;
+}
+
+/* SECCIONES */
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+  background: #d3d1d1;
+}
+section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #222;
+}
+section p {
+  text-align: center;
+}
+
+/* BENEFICII */
+.beneficii .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+.beneficii h3 {
+  margin-bottom: 10px;
+  color: #28a745;
+}
+
+.full-image {
+  width: 100%;
+  overflow: hidden; /* evita desbordes */
+}
+
+/* NEHOTARUT - notas informativas */
+.nehotarut-top {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.nehotarut-img img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+
+.nehotarut-text {
+  flex: 1;
+}
+.nehotarut .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.nehotarut .card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: 0.9rem;
+}
+.nehotarut .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.nehotarut .card h3 {
+  margin-bottom: 10px;
+  color: #28a745;
+}
+.nehotarut h3{
+  margin-bottom: 10px;
+  color: #272927;
+  text-align: center;
+}
+.importanta {
+  list-style: none;
+  margin: 15px 0;
+  padding-left: 0;
+}
+
+.importanta li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.3;
+}
+
+
+/* SERVICII - layout */
+.servicii-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* Columna izquierda con fondo */
+.servicii-left {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  min-height: 400px;
+}
+.servicii-left .bg-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0; /* detrás del texto */
+}
+.servicii-left .overlay-box {
+  position: relative;
+  z-index: 1; /* encima de la imagen */
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 30px;
+  height: 100%;
+}
+.servicii-left h3 {
+  margin-bottom: 15px;
+  color: #28a745;
+}
+.servicii-left ul {
+  list-style: none;
+}
+.servicii-left li {
+  margin: 8px 0;
+}
+.servicii-left.fallback {
+  background: linear-gradient(135deg, #28a745, #1c7430);
+}
+.servicii-left.fallback .overlay-box {
+  background: rgba(0,0,0,0.5);
+}
+
+/* Columna derecha con precios */
+.servicii-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.servicii-right h3 {
+  margin-bottom: 15px;
+  color: #0e0f0e;
+  text-align: center;
+}
+.servicii-right li {
+  background: #fff;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+.servicii-right li:hover {
+  transform: scale(1.02);
+}
+
+.servicii-right .desc {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  margin-top: 0;
+  background: #28a745;   /* verde como antes */
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* Mostrar descripción al hover */
+.servicii-right li:hover .desc {
+  max-height: 200px; /* suficiente para mostrar texto */
+  opacity: 1;
+  margin-top: 10px;
+}
+
+
+/* FAQ */
+.faq details {
+  background: white;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.faq summary {
+  font-weight: bold;
+  color: #28a745;
+}
+.faq p {
+  margin-top: 10px;
+  text-align: left;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+}
+.contact a {
+  color: #28a745;
+  text-decoration: none;
+  font-weight: bold;
+}
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  background: #222;
+  color: #ddd;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes fadeInDown {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+/* --- SERVICII - RESPONSIVE --- */
+@media (max-width: 768px) {
+  .servicii-grid {
+    grid-template-columns: 1fr; /* una sola columna */
+    gap: 20px;
+  }
+
+  .servicii-left {
+    min-height: auto; /* deja que crezca según contenido */
+  }
+
+  .servicii-left .overlay-box {
+    padding: 20px;
+    font-size: 0.95rem;
+  }
+
+  .servicii-right h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  .servicii-right li {
+    font-size: 0.95rem;
+    padding: 12px 15px;
+  }
+  .nehotarut-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nehotarut-text h2, 
+  .nehotarut-text h3 {
+    text-align: center;
+  }
+}
